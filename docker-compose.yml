@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  backend-java:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend-java
+      args:
+        ENVIRONMENT: local
+    container_name: backend-java
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend-java:/app
+      - ./snazzycrm.db:/snazzycrm.db

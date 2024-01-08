@@ -1,0 +1,9 @@
+/app/src/main/java/com/snazzy/crm/search/SearchRepository.java
+/app/src/main/java/com/snazzy/crm/model/Account.java
+/app/src/main/java/com/snazzy/crm/repository/AccountRepositoryImpl.java
+/app/src/main/java/com/snazzy/crm/controller/AccountController.java
+/app/src/main/java/com/snazzy/crm/service/SearchService.java
+/app/src/main/java/com/snazzy/crm/CrmApplication.java
+/app/src/main/java/com/snazzy/crm/dto/AccountSearch.java
+/app/src/main/java/com/snazzy/crm/repository/AccountRepository.java
+/app/src/main/java/com/snazzy/crm/search/Search.java
