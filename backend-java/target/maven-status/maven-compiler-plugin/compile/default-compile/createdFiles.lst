@@ -1,9 +1,0 @@
-com/snazzy/crm/repository/AccountRepositoryImpl.class
-com/snazzy/crm/model/Account.class
-com/snazzy/crm/model/Account$AccountBuilder.class
-com/snazzy/crm/service/SearchService.class
-com/snazzy/crm/controller/AccountController.class
-com/snazzy/crm/CrmApplication.class
-com/snazzy/crm/repository/AccountRepository.class
-com/snazzy/crm/search/SearchRepository.class
-com/snazzy/crm/search/Search.class
