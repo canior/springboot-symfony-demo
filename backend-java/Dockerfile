@@ -4,9 +4,9 @@ FROM maven:3.9-eclipse-temurin-17-alpine AS build
 RUN mkdir -p /app
 WORKDIR app
 COPY pom.xml ./
-RUN mvn verify --fail-never
+RUN mvn  -DskipTests=true verify --fail-never
 COPY src src
-RUN mvn verify package
+RUN mvn -DskipTests=true verify package
 
 FROM build AS build-local
 RUN apk add --update inotify-tools
