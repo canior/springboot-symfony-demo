@@ -14,7 +14,7 @@ docker compose up
 ```
 ## Backend Test
 
-The backend test can br written in java or php. The java application is built using Spring and the php 
+The backend test can br written in java or php (**Note:** php is under construction and currently not available). The java application is built using Spring and the php 
 application is built using Symfony. There is a test suite for each application that can be run for either 
 using this single script:
 ```
