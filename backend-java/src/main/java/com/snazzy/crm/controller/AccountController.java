@@ -20,7 +20,6 @@ public class AccountController {
 
     @GetMapping("/account")
     public List<Account> search(@Valid final AccountSearch accountSearch) {
-//        return this.accountRepository.findAll();
         return this.searchService.search(accountSearch, this.accountRepository);
     }
 }

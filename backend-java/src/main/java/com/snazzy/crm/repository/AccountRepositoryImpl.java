@@ -23,6 +23,7 @@ public class AccountRepositoryImpl implements SearchRepository<Account, AccountS
         Root<Account> root = query.from(Account.class);
 
         query.select(root);
+        query.orderBy(cb.asc(root.get("id")));
 
         return entityManager.createQuery(query).getResultList();
     }
