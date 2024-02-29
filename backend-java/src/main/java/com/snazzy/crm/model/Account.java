@@ -1,8 +1,10 @@
 package com.snazzy.crm.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -23,7 +25,9 @@ public class Account {
     @Column(name = "status")
     private String status;
 
-    @Transient
-    private List<Contact> contacts;
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
+    @OrderBy("id ASC")
+    @JsonManagedReference
+    private List<Contact> contacts = new ArrayList<>();
 
 }

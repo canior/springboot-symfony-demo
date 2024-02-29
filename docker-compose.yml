@@ -13,3 +13,17 @@ services:
     volumes:
       - ./backend-java:/app
       - ./snazzycrm.db:/snazzycrm.db
+
+  backend-php:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend-php
+      args:
+        ENVIRONMENT: local
+    container_name: backend-php
+    ports:
+      - "9090:8000"
+    volumes:
+      - ./backend-php:/app
+      - ./snazzycrm.db:/snazzycrm.db
+      - /app/vendor

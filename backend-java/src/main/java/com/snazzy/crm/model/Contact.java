@@ -1,10 +1,9 @@
 package com.snazzy.crm.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.*;
+
 
 @Getter
 @Setter
@@ -29,5 +28,10 @@ public class Contact {
 
     @Column(name = "`primary`", nullable = false)
     private Boolean primary = false;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id", nullable = false)
+    @JsonBackReference
+    private Account account;
 
 }
